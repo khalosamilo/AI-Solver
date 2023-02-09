@@ -3,7 +3,7 @@ import React from "react";
 export default function OptionSelection({ arrayItems, selectOption }) {
   return (
     <>
-      <h1 className="heading">Homewor Solver ✔</h1>
+      <h1 className="heading">AI Solver ✔</h1>                          //change individually
 
       <div className="grid-main">
         {arrayItems.map((item) => {
@@ -21,7 +21,7 @@ export default function OptionSelection({ arrayItems, selectOption }) {
       </div>
 
       //<div className="grid-pic">
-      //  <div onClick={() => window.location.href = "https://yourwebsite.com"}>
+      //  <div onClick={() => window.location.href = "https://yourwebsite.com"}>              
       //    <h3>Picture Generator</h3>
       //    <pCcreate a random generated picture by using a good defined prompt.</p>
       //  </div>
