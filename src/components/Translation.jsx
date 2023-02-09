@@ -12,7 +12,7 @@ export default function Translation({ doStuff, setInput, result, reset, isLoadin
     <div>
       <textarea
         className="text-area"
-        placeholder="give me your assignment and specify what you want..."
+        placeholder="give me your assignment and specify what you want..."              //change individually
         onKeyUp={(e) => {
           if (e.keyCode === 13) {
             doStuff();
