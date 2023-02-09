@@ -7,14 +7,14 @@ export const arrayItems = [
       prompt:"I'm a highly intelligent homework solving bot, who is specified to solve any assingment and follows constructions. Bot: Ask me anything related to your assignment and I'll do my best to assist you.\n Student: ",
       temperature: 0.5,
       max_tokens: 500,
-      top_p: 1.0,
-      frequency_penalty: 0.0,
-      presence_penalty: 0.0,
+      top_p: 1.0,// alternative to sampling with temperature, called nucleus sampling
+      frequency_penalty: 0.0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
+      presence_penalty: 0.0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
     },
   }, 
   {
     name: "Smart Q&A",
-    description: "provides accurate answers based on its extensive knowledge database.",
+    description: "Provides accurate answers based on its extensive knowledge database.",
     option: {
       model: "text-davinci-003",
       prompt: "I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer. If you ask me a question that is nonsense, trickery, or has no clear answer, I will respond with Unknown. User:\n",
@@ -33,9 +33,9 @@ export const arrayItems = [
       prompt: "I'm a highly intelligent homework solving bot, who is specified to solve the following math assingments and includes every step of the calculation path like: (step1:2y = -3x; step2:y = -3/2x):\n",
       temperature: 0,
       max_tokens: 500,
-      top_p: 1, // alternative to sampling with temperature, called nucleus sampling
-      frequency_penalty: 0.0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
-      presence_penalty: 0.0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+      top_p: 1,
+      frequency_penalty: 0.0, 
+      presence_penalty: 0.0, 
     },
   },
   {
@@ -98,9 +98,9 @@ export const arrayItems = [
       prompt: "I'm a highly intelligent keyword bot, who extracts and creates related keywords from a text. student: ",
       temperature: 0.8,
       max_tokens: 150,
-      top_p: 1, // alternative to sampling with temperature, called nucleus sampling
-      frequency_penalty: 0.0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
-      presence_penalty: 0.0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+      top_p: 1, 
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0, 
     },
   },
   {
@@ -163,9 +163,9 @@ export const arrayItems = [
       prompt: "I'm a highly intelligent table creator bot, who makes tables and categories out of texts. student:  ",
       temperature: 0,
       max_tokens: 250,
-      top_p: 1, // alternative to sampling with temperature, called nucleus sampling
-      frequency_penalty: 0.0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
-      presence_penalty: 0.0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+      top_p: 1,
+      frequency_penalty: 0.0, 
+      presence_penalty: 0.0, 
     },
   },
   {
@@ -183,7 +183,7 @@ export const arrayItems = [
   },
   {
     name: "Mindmap Creation",
-    description: "creates the branches of your mindmap in bullet points. ",
+    description: "Creates the branches of your mindmap in bullet points.",
     option: {
       model: "text-davinci-003",
       prompt: "I am a highly intelligent mindmap generating bot, who lists out the central idea, the main branches and the subbranches of your mindmap in bullet points and explain every subbranch in keywords.\n User: ",
