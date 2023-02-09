@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap");
+
+body {
+  font-family: Poppins, sans-serif;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.heading{
+  background: -webkit-linear-gradient(left, #FFF00F, #f85050);
+  background-clip: initial;
+  position: relative;
+  text-decoration: none;
+  cursor: default;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+.heading::before {
+  content: "";
+  color: goldenrod;
+  position: absolute;
+  bottom: -0.3em;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.grid-pic {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0px 0px 15px 0px rgb(218, 165, 32);
+  border: 2px solid goldenrod;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.grid-pic:hover {
+  background-color: goldenrod;
+  color: #212121;
+}
+
+.grid-pic h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.grid-pic p {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0;
+  min-height: 4.5rem;
+}
+
+.grid-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.grid-child {
+  box-shadow: 0px 0px 15px 0px rgb(218, 165, 32);
+  border: 2px solid goldenrod;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.grid-child:hover {
+  background-color: goldenrod;
+  color: #212121;
+}
+
+.grid-child h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.grid-child p {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0;
+  min-height: 4.5rem;
+}
+
+.text-area {
+  width: 88%;
+  height: 12rem; 
+  max-width: 87rem;
+  border: 2px solid #fff;
+  font-size: 1.25rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-top: 1.5rem;
+  font-family: Poppins;
+  box-shadow: 0px 0px 20px 0px rgb(218, 165, 32);
+  background: #242424;
+  color:rgb(245, 245, 245)
+}
+
+.action-btn,
+.back-btn, .copy-btn {
+  width: 8rem;
+  height: 3rem;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 10px 0px rgb(245, 245, 245);
+  background: #242424;
+}
+
+.copy-btn{
+  margin-right: 0.5rem;
+  border: 2px solid #daa520;
+  color: #ffffff;
+}
+
+.copy-btn:hover {
+  background-color: goldenrod;
+  color: black
+}
+
+.action-btn {
+  border: 2px solid springgreen;
+  color: #00ff7f;
+}
+
+.action-btn:hover {
+  background-color: #00ff7f;
+  color: black; 
+}
+
+.back-btn {
+  margin-right: 0.5rem;
+  border: 2px solid #87ceeb;
+  color: #87ceeb;
+}
+
+.back-btn:hover {
+  background-color: skyblue;
+  color: black
+}
+
+.result-text {
+  width: 88%;
+  height: 187rem; 
+  max-width: 87rem;
+  font-size: 1.25rem;
+  padding: 1rem;
+  border: 2px solid #242424;
+  font-family: Poppins;
+  background: #242424;
+  color:rgb(245, 245, 245)
+}
+
+.loading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  animation: color-transition 3s ease-in-out infinite alternate;
+}
+
+@keyframes color-transition {
+  0% {
+    color: rgb(255, 58, 58);
+  }
+  20% {
+    color: rgb(255, 208, 0);
+  }
+  40% {
+    color: rgb(132, 237, 100);
+  }
+  60% {
+  color: rgb(100, 232, 237);
+  }
+  80% {
+  color: rgb(81, 90, 221);
+  }
+  100% {
+  color: rgb(228, 82, 233);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #root {
+  max-width: 100%;
+  }
+  .grid-main {
+  grid-template-columns: 1fr;
+  }
+  .text-area, .result-text {
+  width: 100%;
+  }
+  }
+  
+  @media screen and (max-width: 500px) {
+  .heading {
+  font-size: 2.2rem;
+  }
+  .grid-child h3 {
+  font-size: 1.25rem;
+  }
+  .grid-child p {
+  font-size: 0.9rem;
+  }
+  .text-area, .result-text {
+  height: 5rem;
+  font-size: 1rem;
+  }
+  .action-btn, .back-btn, .copy-btn {
+  width: 6rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  }
+  }
+  
+  @media screen and (max-width: 400px) {
+  .heading {
+  font-size: 1.9rem;
+  }
+  .grid-child h3 {
+  font-size: 1rem;
+  }
+  .grid-child p {
+  font-size: 0.8rem;
+  }
+  .text-area, .result-text {
+  width: 80%;
+  height: 4rem;
+  font-size: 0.8rem;
+  }
+  .action-btn, .back-btn, .copy-btn {
+  width: 5rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  }
+  .loading {
+    font-size: 0.5rem;
+    margin-top: 1rem;
+  }
+  }
