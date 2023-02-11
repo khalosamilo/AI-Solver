@@ -23,7 +23,7 @@ export default function OptionSelection({ arrayItems, selectOption }) {
       <div className="grid-pic">
         <div onClick={() => window.location.href = "https://your-example-pics.netlify.app.example"}>              
           <h3>Picture Generator</h3>
-          <pCcreate a random generated picture by using a good defined prompt.</p>
+          <p>create a random generated picture by using a good defined prompt.</p>
         </div>
       </div>
     </>
